@@ -1,0 +1,235 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>microstyled</title><meta name="description" content="Documentation for microstyled"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container">
+<div class="table-cell" id="tsd-search" data-base=".">
+<div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M15.7824 13.833L12.6666 10.7177C12.5259 10.5771 12.3353 10.499 12.1353 10.499H11.6259C12.4884 9.39596 13.001 8.00859 13.001 6.49937C13.001 2.90909 10.0914 0 6.50048 0C2.90959 0 0 2.90909 0 6.49937C0 10.0896 2.90959 12.9987 6.50048 12.9987C8.00996 12.9987 9.39756 12.4863 10.5008 11.6239V12.1332C10.5008 12.3332 10.5789 12.5238 10.7195 12.6644L13.8354 15.7797C14.1292 16.0734 14.6042 16.0734 14.8948 15.7797L15.7793 14.8954C16.0731 14.6017 16.0731 14.1267 15.7824 13.833ZM6.50048 10.499C4.29094 10.499 2.50018 8.71165 2.50018 6.49937C2.50018 4.29021 4.28781 2.49976 6.50048 2.49976C8.71001 2.49976 10.5008 4.28708 10.5008 6.49937C10.5008 8.70852 8.71314 10.499 6.50048 10.499Z" fill="var(--color-text)"></path></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
+<ul class="results">
+<li class="state loading">Preparing search index...</li>
+<li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">microstyled</a></div>
+<div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="7" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="11" width="14" height="2" fill="var(--color-text)"></rect></svg></a></div></div></header>
+<div class="container container-main">
+<div class="col-8 col-content">
+<div class="tsd-page-title">
+<h2>microstyled</h2></div>
+<div class="tsd-panel tsd-typography"><div style="width: 100%;" class="heading-container">
+    <img style="width: 100%;" alt="microstyled logo" src="./misc/microstyled.png">
+    <div class="text">
+        <span style="text-align: center; 	font-family: monospace;font-size: 20px;color: grey;" >< microstyled /></span><br><br>
+        <span>A small React Component library inspired by<br><a href="https://styled-components.com" target="__blank">styled-components</a> and <a href="https://emotion.sh/docs/styled" alt="">@emotion/styled</a>.</span>
+    </div>
+</div>
+
+
+
+
+
+
+<a href="#about" id="about" style="color: inherit; text-decoration: none;">
+  <h2>About</h2>
+</a>
+<ul>
+<li>Why?<ul>
+<li>I wanted something smaller and with less dependencies to use for my own projects.</li>
+<li>Also, why not? 🤷</li>
+</ul>
+</li>
+<li>What?</li>
+<li>This project follows the 80/20 addage in supporting 20% of the features you use 80% of the time and will never be as featureful as <code>styled-components</code>, <code>@emotion/styled</code>, et al. </li>
+<li>It will provide the most commonly used functionality: tagged template based CSS styling, dynamic stylesheets, and theme support.</li>
+</ul>
+
+<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+  <h2>Documentation</h2>
+</a>
+<ul>
+<li><p>This is a small library so there are only two main sources of documentation, this <a href="./README.md">README.md</a> and the <a href="./docs/index.html">Typedoc generated</a> documentation.</p>
+</li>
+<li><p>If you are familiar with <code>styled-components</code> and <code>@emotion/styled</code> then this README.md should be sufficient.</p>
+</li>
+</ul>
+
+<a href="#goalscaveats" id="goalscaveats" style="color: inherit; text-decoration: none;">
+  <h4>Goals/Caveats:</h4>
+</a>
+<ul>
+<li>The goal of this project is to be as small as possible</li>
+<li>There is only the basre minimum of CSS validation 🤞</li>
+<li>MDX (component markup translation), and SASS or SCSS is not supported</li>
+</ul>
+
+<a href="#examples" id="examples" style="color: inherit; text-decoration: none;">
+  <h2>Examples</h2>
+</a>
+
+<a href="#css-styles-support" id="css-styles-support" style="color: inherit; text-decoration: none;">
+  <h3>CSS Styles Support</h3>
+</a>
+<ul>
+<li><p>Key/value properties</p>
+<ul>
+<li>Root level key/value pairs can be copied &quot;as is&quot; from normal CSS.</li>
+</ul>
+<pre><code class="language-JSX"><span class="hl-0">import</span><span class="hl-1"> </span><span class="hl-2">microstyled</span><span class="hl-1"> </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&#39;microstyled&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Regular key value CSS properties are written normally</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">Parent</span><span class="hl-1"> = </span><span class="hl-2">microstyled</span><span class="hl-3">.</span><span class="hl-7">div</span><span class="hl-3">`</span><br/><span class="hl-3">  background-color: red;</span><br/><span class="hl-3">`</span><span class="hl-1">;</span><br/><br/><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-0">default</span><span class="hl-1"> </span><span class="hl-2">Parent</span><span class="hl-1">;</span>
+</code></pre>
+<ul>
+<li>The resultant output:</li>
+</ul>
+<pre><code class="language-JSX"><span class="hl-4">// in stylesheet container</span><br/><span class="hl-8">&lt;</span><span class="hl-9">style</span><span class="hl-1"> </span><span class="hl-10">id</span><span class="hl-1">=</span><span class="hl-3">&quot;micro-stled-randomHash&quot;</span><span class="hl-8">&gt;</span><br/><span class="hl-1">  .randomHash </span><span class="hl-5">{</span><span class="hl-11"> </span><span class="hl-2">background</span><span class="hl-1">-</span><span class="hl-2">color</span><span class="hl-11">: </span><span class="hl-2">red</span><span class="hl-11">; </span><span class="hl-5">}</span><br/><span class="hl-8">&lt;/</span><span class="hl-9">style</span><span class="hl-8">&gt;</span><br/><br/><span class="hl-4">// component HTML output minus specified props, children etc.</span><br/><span class="hl-8">&lt;</span><span class="hl-9">div</span><span class="hl-1"> </span><span class="hl-10">class</span><span class="hl-1">=</span><span class="hl-3">&quot;randomHash&quot;</span><span class="hl-8">&gt;&lt;/</span><span class="hl-9">div</span><span class="hl-8">&gt;</span>
+</code></pre>
+</li>
+<li><p>Psuedo class properties</p>
+<pre><code class="language-JSX"><span class="hl-0">import</span><span class="hl-1"> </span><span class="hl-2">microstyled</span><span class="hl-1"> </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&#39;microstyled&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// The ampersand is used as a placeholder for the component class reference</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">Child</span><span class="hl-1"> = </span><span class="hl-2">microstyled</span><span class="hl-3">.</span><span class="hl-7">div</span><span class="hl-3">`</span><br/><span class="hl-3">  font-size: 24px;</span><br/><span class="hl-3">  &amp;:hover {</span><br/><span class="hl-3">    font-size: 36px;</span><br/><span class="hl-3">  }</span><br/><span class="hl-3">`</span><span class="hl-1">;</span><br/><br/><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-0">default</span><span class="hl-1"> </span><span class="hl-2">Child</span><span class="hl-1">;</span><br/>
+</code></pre>
+<ul>
+<li>The resultant output:</li>
+</ul>
+<pre><code class="language-JSX"><span class="hl-4">// in stylesheet container</span><br/><span class="hl-8">&lt;</span><span class="hl-9">style</span><span class="hl-1"> </span><span class="hl-10">id</span><span class="hl-1">=</span><span class="hl-3">&quot;micro-stled-randomHash&quot;</span><span class="hl-8">&gt;</span><br/><span class="hl-1">  .randomHash </span><span class="hl-5">{</span><span class="hl-2">font</span><span class="hl-1">-</span><span class="hl-2">size</span><span class="hl-11">: 24</span><span class="hl-2">px</span><span class="hl-11">; </span><span class="hl-5">}</span><br/><span class="hl-1">  .randomHash:hover </span><span class="hl-5">{</span><span class="hl-11"> </span><span class="hl-2">font</span><span class="hl-1">-</span><span class="hl-2">size</span><span class="hl-11">: 36</span><span class="hl-2">px</span><span class="hl-11">; </span><span class="hl-5">}</span><br/><span class="hl-8">&lt;/</span><span class="hl-9">style</span><span class="hl-8">&gt;</span><br/><br/><span class="hl-4">// component HTML output minus specified props, children etc.</span><br/><span class="hl-8">&lt;</span><span class="hl-9">div</span><span class="hl-1"> </span><span class="hl-10">class</span><span class="hl-1">=</span><span class="hl-3">&quot;randomHash&quot;</span><span class="hl-8">&gt;&lt;/</span><span class="hl-9">div</span><span class="hl-8">&gt;</span>
+</code></pre>
+</li>
+<li><p>Media query properties</p>
+<pre><code class="language-JSX"><span class="hl-0">import</span><span class="hl-1"> </span><span class="hl-2">microstyled</span><span class="hl-1"> </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&#39;microstyled&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Media queries can also be nested inside an elements block.</span><br/><span class="hl-4">// NOTE: Currently, all nested styles must be enclosed in a &quot;&amp; { ... }&quot; block.</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">Cell</span><span class="hl-1"> =  </span><span class="hl-2">microstyled</span><span class="hl-3">.</span><span class="hl-7">div</span><span class="hl-3">`</span><br/><span class="hl-3">  max-width: 540px;</span><br/><span class="hl-3">  @media (max-width 600px) {</span><br/><span class="hl-3">    &amp; {</span><br/><span class="hl-3">      max-width: 100%;</span><br/><span class="hl-3">    }</span><br/><span class="hl-3">    &amp;:hover {</span><br/><span class="hl-3">      background-color: blue;</span><br/><span class="hl-3">    }</span><br/><span class="hl-3">  }</span><br/><span class="hl-3">`</span><span class="hl-1">;</span><br/><br/><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-0">default</span><span class="hl-1"> </span><span class="hl-2">Cell</span><span class="hl-1">;</span><br/>
+</code></pre>
+<ul>
+<li>The resultant output:</li>
+</ul>
+<pre><code class="language-JSX"><span class="hl-4">// in stylesheet container</span><br/><span class="hl-8">&lt;</span><span class="hl-9">style</span><span class="hl-1"> </span><span class="hl-10">id</span><span class="hl-1">=</span><span class="hl-3">&quot;micro-stled-randomHash&quot;</span><span class="hl-8">&gt;</span><br/><span class="hl-1">.randomHash </span><span class="hl-5">{</span><span class="hl-11"> </span><span class="hl-2">max</span><span class="hl-1">-</span><span class="hl-2">width</span><span class="hl-11">: 540</span><span class="hl-2">px</span><span class="hl-11">; </span><span class="hl-5">}</span><br/><span class="hl-1">@media (max-width 600px) </span><span class="hl-5">{</span><br/><span class="hl-11">  .</span><span class="hl-2">randomHash</span><span class="hl-11"> { max-</span><span class="hl-2">width:</span><span class="hl-11"> </span><span class="hl-12">100</span><span class="hl-1">%</span><span class="hl-11">; }</span><br/><span class="hl-11">  .</span><span class="hl-2">randomHash</span><span class="hl-11">:</span><span class="hl-2">hover</span><span class="hl-11"> { background-</span><span class="hl-2">color:</span><span class="hl-11"> </span><span class="hl-2">blue</span><span class="hl-11">; }</span><br/><span class="hl-5">}</span><br/><span class="hl-8">&lt;/</span><span class="hl-9">style</span><span class="hl-8">&gt;</span><br/><br/><span class="hl-4">// component HTML output minus specified props, children etc.</span><br/><span class="hl-8">&lt;</span><span class="hl-9">div</span><span class="hl-1"> </span><span class="hl-10">class</span><span class="hl-1">=</span><span class="hl-3">&quot;randomHash&quot;</span><span class="hl-8">&gt;&lt;/</span><span class="hl-9">div</span><span class="hl-8">&gt;</span>
+</code></pre>
+</li>
+</ul>
+
+<a href="#css-theme-provider-support" id="css-theme-provider-support" style="color: inherit; text-decoration: none;">
+  <h3>CSS Theme Provider Support</h3>
+</a>
+<ul>
+<li><p>There is basic support for a theme object in components created with <code>microstyled</code>.</p>
+<pre><code class="language-JSX"><span class="hl-0">import</span><span class="hl-1"> </span><span class="hl-2">React</span><span class="hl-1"> </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&#39;react&#39;</span><span class="hl-1">;</span><br/><span class="hl-0">import</span><span class="hl-1"> </span><span class="hl-2">microstyled</span><span class="hl-1">, { </span><span class="hl-2">ThemeProvider</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&#39;microstyled&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">myTheme</span><span class="hl-1"> = {</span><br/><span class="hl-1">  </span><span class="hl-2">desktop:</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-2">fontSize:</span><span class="hl-1"> </span><span class="hl-3">&#39;36px&#39;</span><span class="hl-1">;</span><br/><span class="hl-1">  },</span><br/><span class="hl-1">  </span><span class="hl-2">mobile:</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-2">fontSize:</span><span class="hl-1"> </span><span class="hl-3">&#39;24px&#39;</span><span class="hl-1">;</span><br/><span class="hl-1">  },</span><br/><span class="hl-1">};</span><br/><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">MyTheme</span><span class="hl-1"> = </span><span class="hl-7">ThemeProvider</span><span class="hl-1">(</span><span class="hl-2">myTheme</span><span class="hl-1">);</span><br/><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">BackgroundRed</span><span class="hl-1"> = </span><span class="hl-2">microstyled</span><span class="hl-3">.</span><span class="hl-7">div</span><span class="hl-3">`</span><br/><span class="hl-3">  background-color: red;</span><br/><span class="hl-3">`</span><span class="hl-1">;</span><br/><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">Content</span><span class="hl-1"> = </span><span class="hl-2">microstyled</span><span class="hl-3">.</span><span class="hl-7">div</span><span class="hl-3">`</span><br/><span class="hl-3">  @media (max-width: 540px) {</span><br/><span class="hl-3">    &amp; {</span><br/><span class="hl-3">      font-size: </span><span class="hl-5">${</span><span class="hl-2">props</span><span class="hl-11"> </span><span class="hl-5">=&gt;</span><span class="hl-11"> (</span><span class="hl-2">props</span><span class="hl-11">.</span><span class="hl-2">theme</span><span class="hl-11">.</span><span class="hl-2">mobile</span><span class="hl-11">.</span><span class="hl-2">fontSize</span><span class="hl-11">)</span><span class="hl-5">}</span><span class="hl-3">;</span><br/><span class="hl-3">    }</span><br/><span class="hl-3">  }</span><br/><span class="hl-3">`</span><span class="hl-1">;</span><br/><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-7">App</span><span class="hl-1"> = () </span><span class="hl-5">=&gt;</span><span class="hl-1"> (</span><br/><span class="hl-1">  </span><span class="hl-8">&lt;</span><span class="hl-13">MyTheme</span><span class="hl-8">&gt;</span><br/><span class="hl-1">    </span><span class="hl-8">&lt;</span><span class="hl-13">BackgroundRed</span><span class="hl-8">&gt;</span><br/><span class="hl-1">      </span><span class="hl-8">&lt;</span><span class="hl-13">Content</span><span class="hl-8">&gt;</span><br/><span class="hl-1">        Body Text.</span><br/><span class="hl-1">      </span><span class="hl-8">&lt;/</span><span class="hl-13">Content</span><span class="hl-8">&gt;</span><br/><span class="hl-1">    </span><span class="hl-8">&lt;/</span><span class="hl-13">BackgroundRed</span><span class="hl-8">&gt;</span><br/><span class="hl-1">  </span><span class="hl-8">&lt;/</span><span class="hl-13">MyTheme</span><span class="hl-8">&gt;</span><br/><span class="hl-1">);</span>
+</code></pre>
+</li>
+</ul>
+
+<a href="#css-stylesheet-cache-support" id="css-stylesheet-cache-support" style="color: inherit; text-decoration: none;">
+  <h3>CSS Stylesheet Cache Support</h3>
+</a>
+<ul>
+<li><p>Stylesheets are added to the <code>document.head</code> by default. However, they can be pointed to any arbitrary container:</p>
+<pre><code class="language-JSX"><span class="hl-0">import</span><span class="hl-1"> </span><span class="hl-2">React</span><span class="hl-1"> </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&#39;react&#39;</span><span class="hl-1">;</span><br/><span class="hl-0">import</span><span class="hl-1"> </span><span class="hl-2">microstyled</span><span class="hl-1">, { </span><span class="hl-2">StyleCacheProvider</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&#39;microstyled&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">StyleSheetCache</span><span class="hl-1"> = </span><span class="hl-7">StyleCacheProvider</span><span class="hl-1">(</span><span class="hl-2">document</span><span class="hl-1">.</span><span class="hl-2">body</span><span class="hl-1">.</span><span class="hl-7">querySelector</span><span class="hl-1">(</span><span class="hl-3">&#39;#my-cache&#39;</span><span class="hl-1">));</span><br/><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">Content</span><span class="hl-1"> = </span><span class="hl-2">microstyled</span><span class="hl-3">.</span><span class="hl-7">div</span><span class="hl-3">`</span><br/><span class="hl-3">  font-size: 24px;</span><br/><span class="hl-3">`</span><span class="hl-1">;</span><br/><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-7">App</span><span class="hl-1"> = () </span><span class="hl-5">=&gt;</span><span class="hl-1"> (</span><br/><span class="hl-1">  </span><span class="hl-8">&lt;</span><span class="hl-13">StyleSheetCache</span><span class="hl-8">&gt;</span><br/><span class="hl-1">    </span><span class="hl-8">&lt;</span><span class="hl-13">Content</span><span class="hl-8">&gt;</span><br/><span class="hl-1">      Body Text.</span><br/><span class="hl-1">    </span><span class="hl-8">&lt;/</span><span class="hl-13">Content</span><span class="hl-8">&gt;</span><br/><span class="hl-1">  </span><span class="hl-8">&lt;/</span><span class="hl-13">StyleSheetCache</span><span class="hl-8">&gt;</span><br/><span class="hl-1">);</span>
+</code></pre>
+</li>
+</ul>
+
+<a href="#template-interpolation" id="template-interpolation" style="color: inherit; text-decoration: none;">
+  <h3>Template Interpolation</h3>
+</a>
+<ul>
+<li><p>Interpolation values must be a string or arrow functon.</p>
+</li>
+<li><p>Arrow functions have a theme merged props object passed to it and must return a <code>string</code> castable value.</p>
+<pre><code class="language-JSX"><span class="hl-0">import</span><span class="hl-1"> </span><span class="hl-2">microstyled</span><span class="hl-1"> </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&#39;microstyled&#39;</span><span class="hl-1">;</span><br/><span class="hl-0">import</span><span class="hl-1"> </span><span class="hl-2">config</span><span class="hl-1"> </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&#39;./config&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// interpolation must</span><br/><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">Box</span><span class="hl-1"> =  </span><span class="hl-2">microstyled</span><span class="hl-3">.</span><span class="hl-7">div</span><span class="hl-3">`</span><br/><span class="hl-3">  display: </span><span class="hl-5">${</span><span class="hl-2">config</span><span class="hl-11">.</span><span class="hl-2">flex</span><span class="hl-11"> </span><span class="hl-1">?</span><span class="hl-11"> </span><span class="hl-3">&#39;flex&#39;</span><span class="hl-11"> </span><span class="hl-1">:</span><span class="hl-11"> </span><span class="hl-3">&#39;block&#39;</span><span class="hl-5">}</span><span class="hl-3">;</span><br/><span class="hl-3">  </span><span class="hl-5">${</span><span class="hl-2">props</span><span class="hl-11"> </span><span class="hl-5">=&gt;</span><span class="hl-11"> (</span><span class="hl-3">`color: </span><span class="hl-5">${</span><span class="hl-2">props</span><span class="hl-11">.</span><span class="hl-2">theme</span><span class="hl-11">.</span><span class="hl-2">someColorValue</span><span class="hl-5">}</span><span class="hl-3">`</span><span class="hl-11">; }</span><br/><span class="hl-3">`;</span><br/><br/><span class="hl-3">export default Cell;</span>
+</code></pre>
+</li>
+</ul>
+
+<a href="#syntax" id="syntax" style="color: inherit; text-decoration: none;">
+  <h3>Syntax</h3>
+</a>
+<ul>
+<li><p>Key/value statements need to have one colon <code>:</code> and one semicolon <code>;</code>.</p>
+<pre><code class="language-JSX"><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">Box</span><span class="hl-1"> = </span><span class="hl-2">microstyled</span><span class="hl-3">.</span><span class="hl-7">div</span><span class="hl-3">`</span><br/><span class="hl-3">  display: flex;</span><br/><span class="hl-3">`</span><span class="hl-1">;</span><br/>
+</code></pre>
+</li>
+<li><p>Pseudo classes need to use the <code>&amp;</code> as a className placeholder and have an opening <code>{</code> and closing <code>}</code> curly brace.</p>
+<pre><code class="language-JSX"><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">Box</span><span class="hl-1"> = </span><span class="hl-2">microstyled</span><span class="hl-3">.</span><span class="hl-7">div</span><span class="hl-3">`</span><br/><span class="hl-3">  &amp;:nth-child(even) {</span><br/><span class="hl-3">    background-color: grey;</span><br/><span class="hl-3">  }</span><br/><span class="hl-3">`</span><span class="hl-1">;</span><br/>
+</code></pre>
+</li>
+<li><p>Media queries need to use the <code>@media</code> identifier followed by a clause and have opening <code>{</code> and closing <code>}</code> curly braces with at least one nested rule. </p>
+<ul>
+<li>Key/value pairs curently need to be wrapped in a className reference <code>&amp; { ... }</code>.</li>
+</ul>
+<pre><code class="language-JSX"><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">Box</span><span class="hl-1"> = </span><span class="hl-2">microstyled</span><span class="hl-3">.</span><span class="hl-7">div</span><span class="hl-3">`</span><br/><span class="hl-3">  grid-template-columns: 1fr 1fr;</span><br/><span class="hl-3">  @media (max-width: 428px) {</span><br/><span class="hl-3">    &amp; {</span><br/><span class="hl-3">      grid-template-columns: 1fr;</span><br/><span class="hl-3">    }</span><br/><span class="hl-3">    &amp;:hover {</span><br/><span class="hl-3">      background-color: #ccc;</span><br/><span class="hl-3">    }</span><br/><span class="hl-3">  }</span><br/><span class="hl-3">`</span><span class="hl-1">;</span><br/>
+</code></pre>
+</li>
+</ul>
+
+<a href="#roadmap" id="roadmap" style="color: inherit; text-decoration: none;">
+  <h2>Roadmap</h2>
+</a>
+
+<a href="#note-this-project-will-follow-semver-guidelines" id="note-this-project-will-follow-semver-guidelines" style="color: inherit; text-decoration: none;">
+  <h5>NOTE: This project will follow semver guidelines</h5>
+</a>
+<ul>
+<li>1.0.0 -&gt; 1.1.x<ul>
+<li>Bugs, speed, refactoring, cleanup, etc.</li>
+</ul>
+</li>
+<li>1.2.0 -&gt; 1.2.x<ul>
+<li>Full <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSSOM</a> parsing support.</li>
+</ul>
+</li>
+<li>1.3.0 -&gt; 1.3.x<ul>
+<li>Optional <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration">CSSStyleDeclaration</a> support</li>
+<li>Dynamically generated stylesheets will be an &quot;either/or&quot; toggle.</li>
+</ul>
+</li>
+<li>1.4.0 -&gt; 1.4.x<ul>
+<li>Inline component referencing using component constructors.</li>
+<li><code>${OtherComponent} { /* styles */ }</code></li>
+</ul>
+</li>
+<li>1.5.0 -&gt; 1.5.x</li>
+<li>Image caching</li>
+<li>Version 1.6.0 -&gt; 1.6.x</li>
+<li>SVG support</li>
+<li>1.7.0 -&gt; 1.7.x</li>
+<li>Middleware support</li>
+</ul>
+
+<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
+  <h2>Contributing</h2>
+</a>
+<ul>
+<li><p>Currently, there is a fixed roadmap for up to version 2.0.0 (see above). This may change at my discretion.</p>
+</li>
+<li><p>Please see the <a href="./CONTRIBUTING.md">contributing guidelines</a> and the <a href="./CODE_OF_CONDUCT.md">code of conduct</a> for more information regarding submitting feature requests and bugs.</p>
+</li>
+</ul>
+
+<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+  <h2>License</h2>
+</a>
+<p>Licensed under the MIT License, Copyright © 2022-present Carlo Mogavero.</p>
+<p>See <a href="./LICENSE">LICENSE</a> for more information.</p>
+</div></div>
+<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+<div class="tsd-navigation settings">
+<details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility">
+<h4 class="uppercase">Member Visibility</h4><form>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div>
+<div class="tsd-theme-toggle">
+<h4 class="uppercase">Theme</h4><select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<nav class="tsd-navigation primary">
+<details class="tsd-index-accordion" open><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Modules</h3></summary>
+<div class="tsd-accordion-details">
+<ul>
+<li class="current selected"><a href="modules.html">microstyled</a>
+<ul></ul></li></ul></div></details></nav>
+<nav class="tsd-navigation secondary menu-sticky">
+<ul>
+<li class="tsd-kind-variable"><a href="variables/ThemeCacheContext.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-variable)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-32-path"></rect><path d="M11.106 16L8.85 7.24H9.966L11.454 13.192C11.558 13.608 11.646 13.996 11.718 14.356C11.79 14.708 11.842 14.976 11.874 15.16C11.906 14.976 11.954 14.708 12.018 14.356C12.09 13.996 12.178 13.608 12.282 13.192L13.758 7.24H14.85L12.582 16H11.106Z" fill="var(--color-text)" id="icon-32-text"></path></svg>Theme<wbr/>Cache<wbr/>Context</a></li>
+<li class="tsd-kind-variable"><a href="variables/ThemeContext.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>Theme<wbr/>Context</a></li>
+<li class="tsd-kind-function"><a href="functions/Component.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-64-path"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)" id="icon-64-text"></path></svg>Component</a></li>
+<li class="tsd-kind-function"><a href="functions/ComponentFactory.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>Component<wbr/>Factory</a></li>
+<li class="tsd-kind-function"><a href="functions/StyleCacheProvider.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>Style<wbr/>Cache<wbr/>Provider</a></li>
+<li class="tsd-kind-function"><a href="functions/ThemeProvider.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>Theme<wbr/>Provider</a></li>
+<li class="tsd-kind-function"><a href="functions/useThemeCacheContext.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>use<wbr/>Theme<wbr/>Cache<wbr/>Context</a></li>
+<li class="tsd-kind-function"><a href="functions/useThemeContext.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>use<wbr/>Theme<wbr/>Context</a></li></ul></nav></div></div>
+<div class="container tsd-generator">
+<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
+<div class="overlay"></div><script src="assets/main.js"></script></body></html>

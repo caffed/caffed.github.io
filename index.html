@@ -1,1 +1,97 @@
-placeholder
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <title>caffed projects</title>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet"> 
+    <style>
+      body {
+        font-family: 'PT Mono', monospace, sans-serif;
+        font-weight: 400;
+        /* color: #FAB243; */
+        /* background-color: #343838; */
+      }
+
+      h1 {
+        font-size: 64px;
+      }
+
+      .container {
+        margin: 0 auto;
+        max-width: 1200px;
+      }
+      .flex {
+        display: flex;
+        align-items: center;
+      }
+      .projects {
+        margin-top: 36px;
+        padding: 24px 0;
+      }
+      .project {
+        border: dashed 1px #343838;
+        padding: 24px;
+        margin-right: 12px;
+        max-width: 380px;
+      }
+      .project-title {
+        margin-bottom: 24px;
+        font-size: 24px;
+      }
+      .project-desc {
+        margin-bottom: 24px;
+        font-size: 18px;
+      }
+      .project-link {
+        font-size: 18px;
+      }
+      .project-link-icon {
+        margin-right: 12px;
+      }
+      .project-link-anchor a {
+        color: #00DFFC;
+      }
+      .project-link-anchor a:visited {
+        color: #343838;
+      }
+      .project-link-anchor a:hover {
+        color: #008C9E;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>caffed projects</h1>
+        <div>
+          I will be putting more in depth info here later.<br>Currently, I am just linking to the 
+          documentation for my FOSS projects.
+        </div>
+        <div class="projects flex">
+          <div class="project">
+            <div class="project-title">
+              < microstyled />
+            </div>
+            <div class="project-desc">
+              A small library based on <a href="https://styled-components.com">styled-components</a> and <a href="https://emotion.sh/docs/styled">@emotion/styled</a>
+            </div>
+            <div class="project-link">
+              <span class="project-link-icon">></span><span class="project-link-anchor"><a href="https://github.com/caffed/microstyled">Github repo</a></span>
+            </div>
+            <div class="project-link">
+              <span class="project-link-icon">></span><span class="project-link-anchor"><a href="https://github.com/caffed/microstyled/blob/main/docs/modules.md">TypeDoc</a></span>
+            </div>
+            <div class="project-link">
+              <span class="project-link-icon">></span><span class="project-link-anchor"><a href="https://github.com/caffed/microstyled/blob/main/README.md">README.md</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
